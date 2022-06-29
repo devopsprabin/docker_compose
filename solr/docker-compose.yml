@@ -1,0 +1,15 @@
+version: '3'
+services:
+  solr:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - data:/var/solr
+      - ./delete.xml:/home/delete.xml
+      - ./conf/:/home/conf/
+    command:
+      - solr-precreate
+      - anydone_global_search
+volumes:
+  data:
