@@ -18,6 +18,7 @@ services:
     volumes:
       - my-db:/var/lib/mysql
       - ./anydone.sql:/home/anydone.sql
+      - ./restore.sh:/home/restore.sh
 # Names our volume
 volumes:
   my-db:
