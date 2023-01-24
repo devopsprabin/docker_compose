@@ -1,5 +1,9 @@
 # ELK Help
 
+## Official Documentation
+
+[Install Elasticsearch with Docker](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
+
 ## Configuring Elastic Search
 
 ```sh
