@@ -17,9 +17,10 @@ services:
       # Where our data will be persisted
     volumes:
       - data:/var/lib/mysql
-      - ./anydone.sql:/home/anydone.sql
-      - ./restore.sh:/home/restore.sh
-      - ./export.query.sql:/home/export.query.sh
+      - ./sql/export.query.sql:/home/mysql/export.query.sh
+      - ./sql/anydone.sql:/home/mysql/anydone.sql
+      - ./sql/message.sql:/home/mysql/message.sql
+      - ./restore.sh:/home/mysql/restore.sh
 # Names our volume
 volumes:
   data:

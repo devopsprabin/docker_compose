@@ -1,2 +1,3 @@
 solr/conf/
-anydone.*
+anydone.sql
+message.sql
