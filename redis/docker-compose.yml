@@ -1,7 +1,8 @@
 version: '3'
 services:
   redis:
-    image: redis:local
+    image: redis:latest
+    command: redis-server --requirepass password
     restart: always
     ports:
       - '6379:6379'
