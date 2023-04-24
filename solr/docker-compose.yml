@@ -8,6 +8,7 @@ services:
       - data:/var/solr
       - ./delete.xml:/home/delete.xml
       - ./conf/:/home/conf/
+      - ./security.json:/var/solr/data/security.json
     command:
       - solr-precreate
       - anydone_global_search
