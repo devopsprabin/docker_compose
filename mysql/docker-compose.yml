@@ -19,6 +19,7 @@ services:
     image: phpmyadmin
     depends_on:
       - mysql
+    restart: always
     environment:
       - PMA_HOST=mysql
     ports:
