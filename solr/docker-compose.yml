@@ -6,11 +6,9 @@ services:
      - "8983:8983"
     volumes:
       - data:/var/solr
-      - ./delete.xml:/home/delete.xml
-      - ./conf/:/home/conf/
-      - ./security.json:/var/solr/data/security.json
-    command:
-      - solr-precreate
-      - anydone_global_search
+      - ./delete.xml:/home/solr/delete.xml
+      - ./conf/:/home/solr/conf/
+      - ./create_collection.sh:/home/solr/create_collection.sh
+      # - ./security.json:/var/solr/data/security.json
 volumes:
   data:
