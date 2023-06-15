@@ -1,0 +1,11 @@
+# docker run -p 8080:8080 -e KEYCLOAK_ADMIN=root -e KEYCLOAK_ADMIN_PASSWORD=root quay.io/keycloak/keycloak start-dev
+version: '3'
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak
+    environment:
+      - KEYCLOAK_ADMIN=root
+      - KEYCLOAK_ADMIN_PASSWORD=root
+    ports:
+      - 8080:8080
+    command: start-dev
