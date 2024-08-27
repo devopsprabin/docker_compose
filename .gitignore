@@ -1,2 +1,4 @@
 solr/conf/
-anydone.*
+anydone.sql
+message.sql
+mongo/database/

@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  oracledb:
+    image: oracledb
+    ports:
+      - '1521:1521'
+    environment:
+      ORACLE_SID: 'xe'
+      ORACLE_PDB: 'echalan' #database name
+      ORACLE_PWD: 'ecchalan'
+      # INIT_SGA_SIZE:
+      # INIT_PGA_SIZE:
+      # INIT_CPU_COUNT:
+      # INIT_PROCESSES:
+      ORACLE_EDITION: 'express'
+      ORACLE_CHARACTERSET: 'AL32UTF8'
+      # ENABLE_ARCHIVELOG:false
+      ENABLE_TCPS: 'true'
+    volumes:
+      - data:/opt/oracle/oradata
+volumes:
+  data:

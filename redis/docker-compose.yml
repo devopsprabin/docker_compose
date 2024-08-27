@@ -1,12 +1,13 @@
 version: '3'
 services:
   redis:
-    image: redis
+    image: redis:latest
+    command: redis-server --requirepass password
+    restart: always
     ports:
       - '6379:6379'
     volumes:
       - data:/data
-      - conf:/usr/local/etc/redis
+      - ./redis.conf:/conf/redis.conf
 volumes:
   data:
-  conf:
